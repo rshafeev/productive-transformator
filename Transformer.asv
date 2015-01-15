@@ -1,0 +1,28 @@
+classdef Transformer
+    %UNTITLED2 Summary of this class goes here
+    %   Detailed explanation goes here
+    
+    properties(GetAccess = 'public', SetAccess = 'private')
+        type_name   % тип
+        P_nominal   % номинальная мощность
+        Voltages    % напряжение
+    end
+    
+    methods
+     function obj = Transformer()
+
+         obj.P_nominal = 0;
+         obj.Voltages = [0];
+         obj.type_name = '';
+     end
+     function obj = Transformer(,v_P_nominal,v_Voltages,v_type_name)
+
+         obj.P_nominal = v_P_nominal;
+         obj.Voltages = v_Voltages;
+         obj.type_name = v_type_name;
+     end
+     
+    end
+    
+end
+
